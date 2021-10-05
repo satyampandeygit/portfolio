@@ -28,7 +28,7 @@
     padding-top: 20px;
 }
 
-#content{
+#content-wrapper{
     background-color: aqua;
     width: 80%;
     border: 1px solid black;
@@ -36,4 +36,8 @@
     margin-right: auto;
     padding: 10px;
     min-height: 400px;
+}
+
+button{
+    min-width: 120px;
 }

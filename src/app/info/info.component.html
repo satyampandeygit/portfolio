@@ -13,33 +13,40 @@
         - Experience
         - Projects
         - Education
-        - Contact
     -->
 
     <div class="row" id="manual-navigation">
 
         <div class="col-12 col-md-4">
-            Experience
+            <button class="my-2" mat-button (click)="showExperienceContents()">Experience</button>
         </div>
 
         <div class="col-12 col-md-4">
-            Projects
+            <button class="my-2" mat-button (click)="showProjectContents()">Projects</button>
         </div>
 
         <div class="col-12 col-md-4">
-            Education
+            <button class="my-2" mat-button (click)="showEducationContents()">Education</button>
         </div>
 
     </div>
 
-    
-
 </div>
 
-<div class="container" id="content">
+<div class="container" id="content-wrapper">
     <div class="row">
-        <div class="col-12">
 
+        <div class="col-12 content" *ngIf="showExperienceContent">
+            <app-experience></app-experience>
         </div>
+
+        <div class="col-12 content" *ngIf="showProjectContent">
+            <app-projects></app-projects>
+        </div>
+
+        <div class="col-12 content" *ngIf="showEducationContent">
+            <app-education></app-education>
+        </div>
+
     </div>
 </div>
