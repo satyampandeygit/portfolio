@@ -1,34 +1,52 @@
-<div class="wrapper my-2">
+<div class="container wrapper my-2">
 
-    <div id="title">
-     <h2>Welcome to my site</h2>
-     <strong>Hope you have fun exploring me</strong>
+    <div class="row">
+        <div class="col-12">
+            <div id="title">
+            <h2>Welcome to my site</h2>
+            <strong>Hope you have fun exploring me</strong>
+            </div>
+        </div>
     </div>
 
     <!-- Add Buttons for exploring
         - Experience
         - Projects
         - Education
-        - Contact
     -->
-   <div class="container" id="manual-navigation">
 
-        <div class="row">
+    <div class="row" id="manual-navigation">
 
-            <div class="col-12 col-md-4">
-                Experience
-            </div>
-
-            <div class="col-12 col-md-4">
-                Projects
-            </div>
-
-            <div class="col-12 col-md-4">
-                Education
-            </div>
-
+        <div class="col-12 col-md-4">
+            <button class="my-2" mat-button (click)="showExperienceContents()">Experience</button>
         </div>
 
-   </div>
+        <div class="col-12 col-md-4">
+            <button class="my-2" mat-button (click)="showProjectContents()">Projects</button>
+        </div>
 
+        <div class="col-12 col-md-4">
+            <button class="my-2" mat-button (click)="showEducationContents()">Education</button>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container" id="content-wrapper">
+    <div class="row">
+
+        <div class="col-12 content" *ngIf="showExperienceContent">
+            <app-experience></app-experience>
+        </div>
+
+        <div class="col-12 content" *ngIf="showProjectContent">
+            <app-projects></app-projects>
+        </div>
+
+        <div class="col-12 content" *ngIf="showEducationContent">
+            <app-education></app-education>
+        </div>
+
+    </div>
 </div>
