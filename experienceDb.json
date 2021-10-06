@@ -1,0 +1,12 @@
+{
+    "experiences": [
+        {
+            "companyName": "CGI",
+            "role": "Software Engineer",
+            "startDate": "23rd June 2021",
+            "endDate": "11th October 2021",
+            "isPresent": true,
+            "decription": "I was working as a Fullstack Developer. I worked with Angular 12 on frontend & SpringBoot on backend."
+        }
+    ]
+}
